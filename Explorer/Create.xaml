@@ -1,0 +1,29 @@
+﻿<Window x:Class="Explorer.Create"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Explorer"
+        mc:Ignorable="d"
+        Title="Create" Height="268" Width="380">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="labelName" Content="Folder's name: " HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+        <TextBox x:Name="name" Grid.Row="0" Grid.Column="1" FontSize="20" Margin="20"/>
+        <Label Grid.Row="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Select type: "/>
+        <ComboBox x:Name="type" Grid.Row="1" Grid.Column="1" Margin="20" FontSize="20" SelectionChanged="type_SelectionChanged">
+            <ComboBoxItem Content="Folder"/>
+            <ComboBoxItem Content="File"></ComboBoxItem>
+        </ComboBox>
+        <Button Grid.Column="0" Grid.Row="2" Content="Create" FontSize="20" Margin="20" Click="Button_Click"/>
+        <Button Grid.Column="1" Grid.Row="2" Content="Cancel" FontSize="20" Margin="20" Click="Button_Click_1"/>
+    </Grid>
+</Window>
